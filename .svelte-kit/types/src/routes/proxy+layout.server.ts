@@ -28,12 +28,12 @@ export const load = async ({ cookies, fetch, url }: Parameters<LayoutServerLoad>
 	if (profileRes.status === 401 && refreshToken) {
 		// refresh token and try again
 		const refreshRes = await fetch('/api/auth/refresh');
-    if (refreshRes.ok) {
-      throw redirect(307, url.pathname)
-    }
-    return {
-      user: null
-    }
+		if (refreshRes.ok) {
+			throw redirect(307, url.pathname);
+		}
+		return {
+			user: null
+		};
 	} else {
 		return {
 			user: null
