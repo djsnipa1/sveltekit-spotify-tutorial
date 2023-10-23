@@ -117,6 +117,7 @@ declare module '$env/static/private' {
 	export const depsBuildBuild: string;
 	export const npm_package_devDependencies_svelte_check: string;
 	export const XDG_SESSION_CLASS: string;
+	export const npm_package_devDependencies__types_spotify_api: string;
 	export const TERM: string;
 	export const npm_package_name: string;
 	export const GTK_PATH: string;
@@ -125,8 +126,8 @@ declare module '$env/static/private' {
 	export const propagatedNativeBuildInputs: string;
 	export const LESSOPEN: string;
 	export const npm_package_type: string;
-	export const USER: string;
 	export const strictDeps: string;
+	export const USER: string;
 	export const npm_package_devDependencies_vitest: string;
 	export const TMUX_PANE: string;
 	export const TZDIR: string;
@@ -326,6 +327,7 @@ declare module '$env/dynamic/private' {
 		depsBuildBuild: string;
 		npm_package_devDependencies_svelte_check: string;
 		XDG_SESSION_CLASS: string;
+		npm_package_devDependencies__types_spotify_api: string;
 		TERM: string;
 		npm_package_name: string;
 		GTK_PATH: string;
@@ -334,8 +336,8 @@ declare module '$env/dynamic/private' {
 		propagatedNativeBuildInputs: string;
 		LESSOPEN: string;
 		npm_package_type: string;
-		USER: string;
 		strictDeps: string;
+		USER: string;
 		npm_package_devDependencies_vitest: string;
 		TMUX_PANE: string;
 		TZDIR: string;
