@@ -5,7 +5,6 @@
 	import { LogoutButton } from '$components';
 	// import { LogoutButton } from '$lib/components/LogoutButton.svelte'
 
-
 	export let data: LayoutData;
 
 	$: user = data.user;
