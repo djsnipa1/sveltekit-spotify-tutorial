@@ -1,57 +1,57 @@
 {
-	// These tasks will run in order when initializing your CodeSandbox project.
-	"setupTasks": [
-		{
-			"name": "Install Dependencies",
-			"command": "pnpm install"
-		}
-	],
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "pnpm install"
+    }
+  ],
 
-	// These tasks can be run from CodeSandbox. Running one will open a log in the app.
-	"tasks": {
-		"dev": {
-			"name": "dev",
-			"command": "pnpm dev",
-			"runAtStart": true,
-			"preview": {
-				"port": 5173
-			}
-		},
-		"build": {
-			"name": "build",
-			"command": "pnpm build"
-		},
-		"preview": {
-			"name": "preview",
-			"command": "pnpm preview"
-		},
-		"test": {
-			"name": "test",
-			"command": "pnpm test"
-		},
-		"check": {
-			"name": "check",
-			"command": "pnpm check"
-		},
-		"check:watch": {
-			"name": "check:watch",
-			"command": "pnpm check:watch"
-		},
-		"lint": {
-			"name": "lint",
-			"command": "pnpm lint"
-		},
-		"format": {
-			"name": "format",
-			"command": "pnpm format"
-		},
-		"test:integration": {
-			"name": "test:integration",
-			"command": "pnpm test:integration"
-		},
-		"test:unit": {
-			"name": "test:unit",
-			"command": "pnpm test:unit"
-		}
-	}
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "dev": {
+      "name": "dev",
+      "command": "pnpm dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
+    },
+    "build": {
+      "name": "build",
+      "command": "pnpm build"
+    },
+    "preview": {
+      "name": "preview",
+      "command": "pnpm preview"
+    },
+    "test": {
+      "name": "test",
+      "command": "pnpm test"
+    },
+    "check": {
+      "name": "check",
+      "command": "pnpm check"
+    },
+    "check:watch": {
+      "name": "check:watch",
+      "command": "pnpm check:watch"
+    },
+    "lint": {
+      "name": "lint",
+      "command": "pnpm lint"
+    },
+    "format": {
+      "name": "format",
+      "command": "pnpm format"
+    },
+    "test:integration": {
+      "name": "test:integration",
+      "command": "pnpm test:integration"
+    },
+    "test:unit": {
+      "name": "test:unit",
+      "command": "pnpm test:unit"
+    }
+  }
 }

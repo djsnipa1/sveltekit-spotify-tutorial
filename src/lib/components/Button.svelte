@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let element: 'button' | 'a';
 	export let variant: 'solid' | 'outline' | 'danger' = 'solid';
-	export let className: srting = '';
+	export let className: string = '';
 </script>
 
 <svelte:element
@@ -38,11 +38,11 @@
 			color: #fff;
 			border: 2px solid var(--error);
 		}
-		&.disabled {
+		&:disabled {
 			opacity: 0.8;
 			cursor: not-allowed;
 		}
-		&.hover {
+		&:hover {
 			&.button-solid,
 			&.button-danger {
 				background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
@@ -51,7 +51,7 @@
 				background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0 0);
 			}
 		}
-		&.active {
+		&:active {
 			&.button-solid,
 			&.button-danger {
 				background-image: linear-gradient(rgba(255, 255, 255, 0.1) 0 0);
