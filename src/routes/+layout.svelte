@@ -9,6 +9,9 @@
 </script>
 
 <div id="main">
+	{#if user}
+		<div id="sidebar">Sidebar</div>
+	{/if}
 	<div id="content">
 		<main id="main-content">
 			<slot />
@@ -18,7 +21,9 @@
 
 <style lang="scss">
 	#main {
+		display: flex;
 		#content {
+			flex: 1;
 			main#main-content {
 				padding: 30px 15px 60px;
 				@include breakpoint.up('md') {
