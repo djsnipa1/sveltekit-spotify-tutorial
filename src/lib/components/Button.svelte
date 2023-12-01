@@ -21,6 +21,7 @@
 <svelte:element
 	this={element}
 	class="button button-{variant} {className}"
+	role={element === 'a' ? 'link' : 'button'}
 	on:click
 	{...$$restProps}
 >
