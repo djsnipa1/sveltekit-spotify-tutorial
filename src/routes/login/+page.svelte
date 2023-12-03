@@ -28,7 +28,8 @@
 <style lang="scss">
 	:global(body) {
 		background-image: linear-gradient(230deg, var(--sidebar-color), var(--bg-color));
-		height: 100vh;
+		height: 100%;
+		width: 100%;
 	}
 	.wrapper {
 		display: flex;
