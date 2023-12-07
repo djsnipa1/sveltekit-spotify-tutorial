@@ -21,6 +21,7 @@
 <svelte:element
 	this={element}
 	class="button button-{variant} {className}"
+	role={element === 'a' ? 'link' : 'button'}
 	on:click
 	{...$$restProps}
 >
@@ -31,7 +32,7 @@
 	.button {
 		display: inline-block;
 		border: none;
-		font-weight: 500;
+		font-weight: 600;
 		font-size: functions.toRem(14);
 		border-radius: 20px;
 		cursor: pointer;
@@ -48,7 +49,7 @@
 			border: 2px solid;
 		}
 		&.button-danger {
-			background: var(--error);
+			background-color: var(--error);
 			color: #fff;
 			border: 2px solid var(--error);
 		}

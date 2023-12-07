@@ -9,7 +9,7 @@
 		<img src={logo} class="logo" alt="Spotify" />
 		<h1>EGP 0.00 for 3 months of Premium</h1>
 		<p>Enjoy ad-free music listening, offline playback, and more. Cancel anytime.</p>
-		<div class="button">
+		<div class="buttons">
 			<Button
 				element="a"
 				variant="outline"
@@ -28,7 +28,8 @@
 <style lang="scss">
 	:global(body) {
 		background-image: linear-gradient(230deg, var(--sidebar-color), var(--bg-color));
-		height: 100vh;
+		height: 100%;
+		width: 100%;
 	}
 	.wrapper {
 		display: flex;
