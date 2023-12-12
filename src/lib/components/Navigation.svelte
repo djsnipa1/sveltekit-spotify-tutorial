@@ -6,6 +6,9 @@
 
 	export let desktop: boolean;
 
+let isMobileMenuOpen = false;
+$: isOpen = desktop || isMobileMenuOpen
+
 	const menuItems: { path: string; label: string; icon: ComponentType<Icon> }[] = [
 		{
 			path: '/',
