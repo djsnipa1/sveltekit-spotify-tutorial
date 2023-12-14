@@ -20,7 +20,7 @@
 			path: '/search',
 			label: 'Search',
 			icon: Search
-i		},
+		},
 		{
 			path: '/playlists',
 			label: 'Playlists',
