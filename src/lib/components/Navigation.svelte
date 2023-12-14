@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { ComponentType } from 'svelte';
 	import { Home, Search, ListMusic, type Icon } from 'lucide-svelte';
+	import type { ComponentType } from 'svelte';
 	import logo from '$assets/Spotify_Logo_RGB_White.png';
 	import { page } from '$app/stores';
+	import { fade } from 'svelte/transition';
 
 	export let desktop: boolean;
 
@@ -19,7 +20,7 @@
 			path: '/search',
 			label: 'Search',
 			icon: Search
-		},
+i		},
 		{
 			path: '/playlists',
 			label: 'Playlists',
@@ -35,7 +36,20 @@
 	};
 </script>
 
+<svelte:head>
+	{#if !desktop && isMobileMenuOpen}
+		<style>
+			body {
+				overflow: hidden;
+			}
+		</style>
+	{/if}
+</svelte:head>
+
 <div class="nav-content" class:desktop class:mobile={!desktop}>
+	{#if !desktop && isMobileMenuOpen}
+		<div class="overlay" on:click={closeMenu} transition:fade={{ duration: 200 }} />
+	{/if}
 	<nav aria-label="Main">
 		{#if !desktop}
 			<button on:click={openMenu}>Open</button>
@@ -68,6 +82,19 @@
 
 <style lang="scss">
 	.nav-content {
+		.overlay {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: var(--sidebar-color);
+			opacity: 0.75;
+			z-index: 100;
+			@include breakpoint.up('md') {
+				display: none;
+			}
+		}
 		.logo {
 			max-width: 100%;
 			width: 130px;
@@ -127,7 +154,7 @@
 			z-index: 100;
 			transition: transform 200ms, opacity 200ms;
 			&.is-hidden {
-				transform: translateD(-100%);
+				transform: translateX(-100%);
 				opacity: 0;
 			}
 			@include breakpoint.down('md') {
