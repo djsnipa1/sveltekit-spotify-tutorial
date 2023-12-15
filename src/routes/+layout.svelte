@@ -1,19 +1,18 @@
 <script lang="ts">
-	import { Navigation } from '$components';
+	import { Navigation, Header } from '$components';
 	import 'modern-normalize/modern-normalize.css';
 	import '../styles/main.scss';
 	import type { LayoutData } from './$types';
 
-
 	let topbar: HTMLElement;
-	let scrollY: number;	
+	let scrollY: number;
 	let headerOpacity = 0;
-	
-	$: if(topbar) {
-		console.log(topbar && scrollY / topbar.offsetHeight)
-		headerOpacity = scrollY / topbar.offsetHeight < 1 ? scrollY / topbar.offserHeight : 1;
-	} 
-	
+
+	$: if (topbar) {
+		console.log(topbar && scrollY / topbar.offsetHeight);
+		headerOpacity = scrollY / topbar.offsetHeight < 1 ? scrollY / topbar.offsetHeight : 1;
+	}
+
 	export let data: LayoutData;
 
 	$: user = data.user;
@@ -29,8 +28,12 @@
 	{/if}
 	<div id="content">
 		<div id="topbar" bind:this={topbar}>
-			<div class="topbar-bg" style:background-color="var(--header-color)" style:opacity={headerOpacity} />
-			topbar
+			<div
+				class="topbar-bg"
+				style:background-color="var(--header-color)"
+				style:opacity={headerOpacity}
+			/>
+			<Header />
 		</div>
 		<main id="main-content" class:logged-in={user}>
 			<slot />
@@ -70,7 +73,7 @@
 					padding: 30px 30px 60px;
 				}
 				&.logged-in {
-				padding-top: calc(30px + var(--header-height));
+					padding-top: calc(30px + var(--header-height));
 				}
 			}
 		}
