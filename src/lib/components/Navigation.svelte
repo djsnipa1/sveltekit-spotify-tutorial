@@ -92,7 +92,7 @@
 	{/if}
 	<nav aria-label="Main">
 		{#if !desktop}
-			<IconButton icon={Menu} label="Open menu"/>
+			<IconButton icon={Menu} label="Open menu" />
 			<button bind:this={openMenuButton} on:click={openMenu} aria-expanded={isOpen}>Open</button>
 		{/if}
 		<div
